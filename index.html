@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Righteous|Source+Sans+Pro" rel="stylesheet">
+    <title>Caja Registradora</title>
+</head>
+
+<body>
+    <div id="header" class="divDesign">
+    <h1>CAJA REGISTRADORA</h1>
+    </div>
+
+    <div id="divForm" class="divDesign">
+        <form>
+            <fieldset class="fieldsets">
+                <legend class="legends">Ingresa un producto</legend>
+                <br>
+                Cantidad: <input class="inputs" id="quantity" type="number" name="quantityName" min="0.01" placeholder="00"
+                    required>
+                <br>
+                <br>    
+                Descripcion: <input class="inputs" id="description" type="text" name="descriptionName" placeholder="manzanas"
+                    required>
+                <br>
+                <br>
+                Costo: <input class="inputs" id="rate" type="number" name="rateName" min="0.01" placeholder="200" required>
+                <br>
+                <br>
+                <button class="btn" type="button" onclick="addNewItem()">Ingresar</button>
+                <br>
+            </fieldset>
+            <fieldset class="fieldsets">
+                <legend class="legends">Elimina un producto</legend>
+                <br>
+                <button class="btn" type="button" onclick="deleteLastItem()">Eliminar</button>
+                <br>
+            </fieldset>
+            <fieldset class="fieldsets">
+                <legend class="legends">Eliminar Todo</legend>
+                <br>
+                <button class="btn" type="button" onclick="deleteAllItems()">Eliminar</button>
+                <br>
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="divItemList" class="divDesign">
+        <h3 id="headline3">Esta es tu Cuenta</h3>
+        <table id="itemsTable" border solid 1px>
+            <tr>
+                <th>Cantidad</th>
+                <th>Descripcion</th>
+                <th>Valor</th>
+                <th>Valor Total</th>
+            </tr>
+        </table>
+        <table id="totalTable">
+            <th></th>
+            <th></th>
+            <th>Gran Total: </th>
+            <th id="totalData"></th>
+        </table>
+    </div>
+
+    <script src="/index.js"></script>
+</body>
+
+</html>
